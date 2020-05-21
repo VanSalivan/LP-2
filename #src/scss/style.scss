@@ -1,0 +1,48 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"),
+		url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@import "reset";
+@import "fonts";
+// Миксин поключает файлы шрифтов
+//------------------------------------------------------------------------
+
+//------ Common -------------
+// ОТ
+$screen-phone: 576px;
+$screen-tablet: 768px;
+$screen-desktop: 992px;
+$screen-large-desktop: 1200px;
+// ДО
+$screen-small-max: 575px; // от 0 до 575px
+$screen-phone-max: 767px;
+$screen-tablet-max: 991px;
+$screen-desktop-max: 1199px;
+
+// ОТ
+@media (min-width: $screen-phone) {}
+
+// ДО
+@media (max-width: $screen-small-max) {}
+
+//------ /Common ------------
+
+h1 {
+	font-size: 45px;
+	font-family: "Decade";
+}
+//------ HEADER -------------
+//------ /HEADER ------------
+
+//------ BLOCK --------------
+//------ /BLOCK -------------
+
+//------ FOOTER -------------
+//-----/ FOOTER -------------
