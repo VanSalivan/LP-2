@@ -1,14 +1,11 @@
 <header class="header">
     <!-- ограничивающий класс _container -->
     <div class="header__container _container">
+         <!-- burger-menu -->
+         <div class="menu__icon burger-menu" >
+        </div>
         <a href="" class="header__logo"><img src="./img/logo.png" alt=""></a>
         <div class="header__menu menu">
-            <!-- burger-menu -->
-            <div class="menu__icon icon-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
             <!-- main-menu -->
             <nav class="menu__body">
                 <ul class="menu__list">
@@ -18,14 +15,16 @@
                     <li><a href="" class="menu__link">Партнерам</a></li>
                     <li><a href="" class="menu__link">Контакты</a></li>
                 </ul>
+
             </nav>
         </div>
         <div class="header-action action-header">
-            <a href="" class="action-header__region"><span>Выбор Региона</span></a>
+            <a data-da="menu__body,1,767" href="" class="action-header__region"><span>Выбор Региона</span></a>
             <div class="action-header__user user-header">
                 <div class="user-header__icon">
                     <img src="./img/icons/user.png" alt="">
                 </div>
+                <!-- second menu -->
                 <ul class="user-header__menu">
                     <li><a href="" class="user-header__link user-header__link_1">Выбор региона</a></li>
                     <li><a href="" class="user-header__link user-header__link_2">Личный кабинет</a></li>
