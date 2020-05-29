@@ -13,6 +13,7 @@
 @import "fonts";
 @import "header";
 @import "garage";
+@import "decor";
 
 // Миксин поключает файлы шрифтов
 //------------------------------------------------------------------------
@@ -112,51 +113,26 @@ $md4:479.98;
 	// .item-main-slider__bg
 	&__bg {
 		position: absolute;
-		width: 100%;
-		height: 100%;
 		top: 0;
 		left: 0;
 
-		picture,
-		img {
-			height: 100%;
-			width: 100%;
-			object-fit: cover;
-		}
+		// picture,
+		// img {
+		// 	height: 100%;
+		// 	width: 100%;
+		// 	object-fit: cover;
+		// }
 	}
 
 	// .item-main-slider__text
 	&__text {
 		max-width: 700px;
-		margin: 25px auto 0px auto;
+		margin: 25px auto 50px auto;
 		color: #ffffff;
 		font-family: "PT Sans";
 		font-size: 15px;
 		line-height: calc(25 / 15); // Автоматически подстраивался при смене шрифта
-		// flex: 1 1 auto;
-	}
-
-	&__btn {
-		margin-top: 50px;
-		position: relative;
-		padding: 20px 53px;
-		display: inline-flex;
-		text-transform: uppercase;
-		letter-spacing: 1.5px;
-		color: #ffffff;
-		border: 3px solid;
-		border-image-source: linear-gradient(to top, #946d36, #c4a977);
-		border-image-slice: 1;
-
-		&:hover {
-			color: #946d36;
-			border: 3px solid;
-			border-image-source: linear-gradient(to top, #c4a977, #946d36);
-			border-image-slice: 1;
-			background: linear-gradient(white, #ce8013); // Градиент для текста //
-			-webkit-background-clip: text; // Обрезаем фон по тексту 
-			-webkit-text-fill-color: transparent; // Прозрачный текст 
-		}
+		flex: 1 1 auto;
 	}
 }
 
@@ -195,9 +171,8 @@ $md4:479.98;
 	}
 }
 
-//------ /MAIN-SLIDER ------------
+//------ LOTS ---------------------
 
-//------  LOTS ------------------
 .lots {
 	padding-top: 85px;
 	padding-bottom: 63px;
@@ -206,10 +181,303 @@ $md4:479.98;
 	&__container {}
 
 	// .lots__header
-	&__header {}
+	&__header {
+		padding-bottom: 40px
+	}
 
 	// .lots__slider
 	&__slider {}
+
+}
+
+.slider-lots {
+
+	// .slider-lots__body
+	&__body {
+		display: flex;
+		margin-bottom: 50px;
+		// margin: 0 -30px;
+		flex-wrap: wrap;
+
+	}
+
+	// .slider-lots__slide
+	&__slide {
+		// background-color: red;
+		flex: 1 1 33.333%;
+		// padding: 0 30px;
+		display: flex;
+		justify-content: center;
+		transition: all 2s ease-out;
+
+
+	}
+
+	// .slider-lots__control
+	&__control {}
+}
+
+.control-slider-lots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	// .control-slider-lots__arrow
+	&__arrow {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		justify-content: flex-end;
+
+		span {
+			background: url("../img/icons/sl-arrow.svg") 0 0 no-repeat;
+			width: 108px;
+			height: 35px;
+			flex: 0 0 108px;
+
+			@media (max-width:430px) {
+				flex: 0 0 50px;
+			}
+		}
+
+		&::after {
+			content: "";
+			height: 15px;
+			width: 15px;
+			border: 1px solid #bb9c66;
+			border-radius: 50%;
+			margin: 0 5px;
+		}
+
+		&:last-child {
+			flex-direction: row-reverse;
+
+			span {
+				transform: rotate(180deg);
+			}
+
+		}
+	}
+
+	// .control-slider-lots__link
+	&__link {
+		font-family: "PFD";
+		background: url("../img/icons/circle.png") 0 0 no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 0 0 100px;
+		height: 100px;
+		font-size: 21px;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: #000;
+		margin: 0 20px;
+	}
+}
+
+//-------- LOT-HEADER --------------
+
+.lot {
+	// background: grey;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	flex: 0 1 250px;
+	height: 100%;
+	transition: all .4s ease-out;
+
+
+
+	// .lot__header
+	&__header {
+		text-align: center;
+		margin-bottom: 30px;
+		position: relative;
+	}
+
+	// .lot__image
+	&__image {
+		margin: 5px;
+		display: block;
+		border: 3px solid #bb9c66;
+		padding: 0px 0px 97% 0px;
+	}
+
+	// .lot__timer
+	&__timer {}
+
+	//-------- LOT-INFO -------------
+
+	// .lot__title
+	&__title {
+		flex: 1 1 auto;
+		font-size: 21px;
+		font-family: "PFD";
+		font-weight: 700;
+		text-transform: uppercase;
+		line-height: calc(25 / 21);
+		color: #000000;
+		position: relative;
+		z-index: 10;
+		margin: 0 0 30px/21px * 1em 0px;
+		transition: all .3s ease-out;
+
+		&:hover {
+			color: #bb9c66;
+		}
+
+		@media (max-width:767px) {
+			font-size: 18px;
+		}
+	}
+
+	// .lot__info
+	&__info {}
+
+	&:hover {
+		box-shadow: 0 0 40px #bb9c66;
+	}
+}
+
+.timer-lot {
+	transform: translate(-50%, 50%);
+	width: 72px;
+	height: 72px;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	padding-top: 3px;
+
+	div {
+		position: relative;
+		z-index: 2;
+	}
+
+	&:before {
+		content: "";
+		background-color: #ffffff;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: rotate(-45deg);
+	}
+
+	// .timer-lot__icon
+	&__icon {
+		margin-bottom: 6px;
+	}
+
+	// .timer-lot__item
+	&__item {
+		font-size: 15px;
+		font-family: "PTSans";
+		font-weight: 600;
+	}
+}
+
+//-------- LOT-INFO ---------------
+
+.info-lot {
+	display: flex;
+	justify-content: center;
+
+	// .info-lot__statistic
+	&__statistic {
+		flex: 0 0 50px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	// .info-lot__icon
+	&__icon {
+		width: 25px * 0.72;
+		height: 25px * 0.72;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		z-index: 2;
+		margin: 0 auto;
+
+		img {
+			position: relative;
+			z-index: 2;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&::after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			transform: rotate(-45deg);
+			background-color: #000000;
+			position: absolute;
+
+		}
+	}
+
+	// .info-lot__value
+	&__value {
+		margin-top: 10px;
+		padding-bottom: 5px;
+		font-size: 14px;
+		border-bottom: 1px solid #bb9c66;
+	}
+
+	// .info-lot__current-bet
+	&__current-bet {
+		flex: 1 1 auto;
+	}
+
+	// .info-lot__btn
+	&__btn {
+		margin: 30px 25px 10px;
+	}
+}
+
+.current-bet-info-lot {
+	padding: 0 5px;
+	position: relative;
+
+	&::after {
+		content: "";
+		width: 72px;
+		height: 72px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border: 1px solid #bb9c66;
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+
+	div {
+		position: relative;
+		z-index: 2;
+	}
+
+	// .current-bet-info-lot__label
+	&__label {
+		margin-bottom: 5px;
+	}
+
+	// .current-bet-info-lot__value
+	&__value {
+		white-space: nowrap;
+		font-family: "BravoRGRegular";
+		font-size: 50px;
+	}
+
+	// .current-bet-info-lot__currency
+	&__currency {}
 }
 
 //------ /LOTS ------------------
