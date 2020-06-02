@@ -338,6 +338,7 @@ $md4:479.98;
 
 	&:hover {
 		box-shadow: 0 0 40px #bb9c66;
+		border-radius: 5px;
 	}
 }
 
@@ -485,13 +486,65 @@ $md4:479.98;
 
 .categories {
 
+	// categories__outer-wrapper
+	&__outer-wrapper {
+		margin-bottom: 85px;
+	}
+
 	// .categories__container
-	&__container {}
+	&__container {
+		overflow: hidden;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			height: 40px;
+			width: 100%;
+			background-color: #ffffff;
+		}
+	}
 
 	// .categories__flex-row
 	&__flex-row {
 		display: flex;
+		flex-wrap: wrap;
 		margin: 0px -50px;
+		position: relative;
+		padding-top: 35px;
+
+		&::before,
+		&::after {
+			position: absolute;
+			top: 4px;
+			content: "";
+			width: 24px * 0.72;
+			height: 24px * 0.72;
+			flex: 0 0 24px * 0.72;
+			border: 1px solid #bb9c66;
+			transform: translate(-50%, 0px) rotate(45deg);
+		}
+
+		&::before {
+			left: 33.333%;
+
+			@media (max-width:975px) {
+				left: 50%;
+			}
+
+			@media (max-width:640px) {
+				display: none;
+			}
+		}
+
+		&::after {
+			left: 66.667%;
+
+			@media (max-width:975px) {
+				display: none;
+			}
+		}
 	}
 
 	// .categories__column
@@ -500,11 +553,90 @@ $md4:479.98;
 		flex: 0 1 33.3333%;
 		margin-bottom: 25px;
 		position: relative;
-		
+		display: flex;
+		justify-content: center;
+
+		@media (max-width:975px) {
+			flex: 0 1 50%;
+		}
+
+		@media (max-width:640px) {
+			flex: 0 1 100%;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			bottom: -5px;
+			width: 10px;
+			height: 10px;
+			background-color: #bb9c66;
+			border-radius: 50%;
+			transform: translate(-50%, 0px);
+		}
+
 	}
 
 	// .categories__item
 	&__item {}
+
+	&__decor {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 24px;
+		height: calc(100% + 9px);
+		transform: translate(50%, 0);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		z-index: 5;
+
+		&::before {
+			// ЛИНИЯ
+			content: "";
+			width: 1px;
+			flex: 1 1 auto;
+			background-color: #bb9c66;
+		}
+
+		&::after {
+			// КВАДРАТ
+			content: "";
+			width: 24px * 0.72;
+			height: 24px * 0.72;
+			flex: 0 0 24px * 0.72;
+			border: 1px solid #bb9c66;
+			transform: rotate(45deg);
+			margin-top: 15px;
+		}
+
+		span {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			flex: 1 1 auto;
+
+			&::before {
+				// ТОЧКА
+				content: "";
+				width: 10px;
+				height: 10px;
+				background-color: #bb9c66;
+				border-radius: 50%;
+				margin: 20px 0px;
+			}
+
+			&::after {
+				// ЛИНИЯ
+				content: "";
+				width: 1px;
+				flex: 1 1 auto;
+				background-color: #bb9c66;
+			}
+		}
+	}
 }
 
 .item {
@@ -512,10 +644,27 @@ $md4:479.98;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 30px 10px 40px 10px;
+	padding: 30px 30px 40px;
 	height: 250px;
 	width: 250px;
-	
+	text-align: center;
+	overflow: hidden;
+	border-radius: 50%;
+
+	@media (min-width:992px) {
+		&:hover {
+			.item__background {
+				transform: scale(1.1);
+
+				&::after {
+					opacity: 0.4;
+				}
+			}
+		}
+	}
+
+
+
 	&__link {
 		position: absolute;
 		width: 100%;
@@ -536,6 +685,7 @@ $md4:479.98;
 		left: 0;
 		border-radius: 50%;
 		overflow: hidden;
+		transition: transform 0.8s ease 0s;
 
 		&::after {
 			content: "";
@@ -544,7 +694,9 @@ $md4:479.98;
 			height: 100%;
 			top: 0;
 			left: 0;
-			background-color: rgba(#000, 0.7);
+			background-color: rgb(0, 0, 0);
+			opacity: 0.65;
+			transition: opacity 0.4s ease 0s;
 		}
 	}
 
@@ -552,7 +704,7 @@ $md4:479.98;
 	&__icon {
 		position: relative;
 		z-index: 2;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 	}
 
 	// .item__title
@@ -565,6 +717,9 @@ $md4:479.98;
 		text-transform: uppercase;
 		color: #ffffff;
 		flex: 1 1 auto;
+		line-height: calc(25 / 21);
+		letter-spacing: 2.1px;
+		text-align: center;
 	}
 
 	&__decore {
@@ -573,6 +728,40 @@ $md4:479.98;
 	}
 }
 
+.text-categories {
+	color: #333333;
+	font-family: "PTSans";
+	font-size: 15px;
+	line-height: calc(25 / 15);
+
+	p {
+		margin-bottom: 25px;
+
+		&::last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	// .text-categories__container
+	&__container {}
+
+	// .text-categories__body
+	&__body {
+		padding:10px 0px 10px 130px;
+		background: url('../img/categories/decor.png') left top repeat-y;
+		position: relative;
+
+		&:before {
+			content: "";
+			background: url('../img/categories/decor_header.png');
+			position: absolute;
+			top: -5px;
+			left: 0;
+			width: 85px;
+			height: 12px;
+		}
+	}
+}
 //------  BLOCK ------------------
 //------ /BLOCK ------------------
 
