@@ -9,6 +9,10 @@ $md4:479.98;
 //------ HEADER -------------
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #1c242a;
     z-index: 50;
 
