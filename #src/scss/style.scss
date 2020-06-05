@@ -27,7 +27,7 @@ $md2:991.98;
 $md3:767.98;
 $md4:479.98;
 
-html{
+html {
 	scroll-behavior: smooth;
 }
 
@@ -70,6 +70,13 @@ html{
 //------ MAIN-SLIDER -------------
 .main-slider {
 	position: relative;
+
+	:before {
+		display: block;
+		content: "";
+		height: 75px;
+		margin: -75px 0 0;
+	}
 
 	// .main-slider__body
 	&__body {}
@@ -295,7 +302,6 @@ html{
 
 //-------- LOT-HEADER --------------
 .lot {
-	// background: grey;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -499,6 +505,13 @@ html{
 //------ CATEGORIES ---------------
 .categories {
 	margin-bottom: 70px;
+
+	&:before {
+		display: block;
+		content: "";
+		height: 75px;
+		margin: -75px 0 0;
+	}
 
 	@media (max-width:767px) {
 		margin-bottom: 35px
@@ -798,6 +811,13 @@ html{
 	padding: 60px 0px 40px;
 	background-color: #1c242a;
 
+	&:before {
+		display: block;
+		content: "";
+		height: 75px;
+		margin: -75px 0 0;
+	}
+
 	// .servises__container
 	&__container {}
 
@@ -1049,6 +1069,13 @@ html{
 //------  INFO ---------------------
 .info {
 	padding-bottom: 75px;
+
+	&:before {
+		display: block;
+		content: "";
+		height: 75px;
+		margin: -75px 0 0;
+	}
 
 	// .info__container
 	&__container {}
