@@ -4,7 +4,6 @@
 // Andrikanych Yevhen 2020
 // https://www.youtube.com/c/freelancerlifestyle
 "use strict";
-console.log("адаптив работает");
 
 (function () {
 	let originalPositions = [];

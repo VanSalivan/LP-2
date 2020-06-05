@@ -9,5 +9,3 @@ function ibg() {
 }
 
 ibg();
-
-console.log("ibg работает")

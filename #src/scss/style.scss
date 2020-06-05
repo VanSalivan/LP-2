@@ -27,6 +27,10 @@ $md2:991.98;
 $md3:767.98;
 $md4:479.98;
 
+html{
+	scroll-behavior: smooth;
+}
+
 .wrapper {
 	width: 100%;
 	min-height: 100%;
@@ -53,8 +57,12 @@ $md4:479.98;
 	// }
 }
 
-.page{
+.page {
 	padding-top: 75px;
+}
+
+.active {
+	color: #bb9c66;
 }
 
 //------ /Common -----------------
@@ -849,7 +857,12 @@ $md4:479.98;
 		color: #ffffff;
 		letter-spacing: 1.1px;
 		flex: 1 1 auto;
+
+		&:hover {
+			color: #bb9c66;
+		}
 	}
+
 
 	// .service__text
 	&__text {
@@ -874,6 +887,10 @@ $md4:479.98;
 		letter-spacing: 2.1px;
 		text-align: center;
 		margin-top: 30px;
+
+		&:hover {
+			color: #bb9c66;
+		}
 
 		&::before {
 			content: "";

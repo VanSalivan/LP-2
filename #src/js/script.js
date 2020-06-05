@@ -26,3 +26,15 @@ document.addEventListener('click', function (e) {
         userMenu.classList.remove("_active");
     }
 });
+
+// HEADER NAVIGATION
+MENU.addEventListener('click', (event) => {
+    LINKS.forEach(el => el.classList.remove("active"));
+
+    event.target.classList.add("active");
+
+    if (event.target.classList.value === 'menu__link active') {
+        MOBILE_BACKGROUND.classList.remove('_active');
+        BURGER_BUTTON.style.transform = 'rotate(0)';
+    }
+});
