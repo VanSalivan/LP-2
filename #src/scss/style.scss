@@ -70,7 +70,13 @@ html {
 
 //------ MAIN-SLIDER -------------
 .main-slider {
-	// position: relative;
+
+	&:before {
+		display: block;
+		content: "";
+		height: 75px;
+		margin: -75px 0 0;
+	}
 
 	// .main-slider__body
 	&__body {}
