@@ -15,6 +15,7 @@
 @import "garage";
 @import "decor";
 @import "footer";
+@import "_slider";
 
 // Миксин поключает файлы шрифтов
 //------------------------------------------------------------------------
@@ -69,14 +70,7 @@ html {
 
 //------ MAIN-SLIDER -------------
 .main-slider {
-	position: relative;
-
-	:before {
-		display: block;
-		content: "";
-		height: 75px;
-		margin: -75px 0 0;
-	}
+	// position: relative;
 
 	// .main-slider__body
 	&__body {}
@@ -110,7 +104,6 @@ html {
 }
 
 .item-main-slider {
-	position: relative;
 	text-align: center;
 	padding-top: 30px;
 	padding-bottom: 100px;
@@ -168,10 +161,10 @@ html {
 		cursor: pointer;
 
 		// .control-main-slider__arrow_prev
-		&_prev {}
+		&.left {}
 
 		// .control-main-slider__arrow_next
-		&_next {
+		&.right {
 			transform: rotate(-180deg);
 		}
 	}
