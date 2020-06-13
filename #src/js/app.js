@@ -2,4 +2,5 @@
 @@include('./adaptive.js');
 @@include('./ibg.js');
 @@include('./onScroll.js');
-@@include('./_slider.js');
+@@include('./slider_1.js');
+@@include('./slider_2.js');

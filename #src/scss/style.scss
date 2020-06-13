@@ -15,7 +15,7 @@
 @import "garage";
 @import "decor";
 @import "footer";
-@import "_slider";
+@import "slider_1";
 
 // Миксин поключает файлы шрифтов
 //------------------------------------------------------------------------
@@ -213,27 +213,24 @@ html {
 }
 
 .slider-lots {
+	overflow: hidden;
 
 	// .slider-lots__body
 	&__body {
 		display: flex;
 		margin-bottom: 50px;
 		// margin: 0 -30px;
-		flex-wrap: wrap;
+		transition: .5s;
+
 	}
 
 	// .slider-lots__slide
 	&__slide {
-		// background-color: red;
-		flex: 1 1 33.333%;
+		min-width: 250px;
 		// padding: 0 30px;
 		display: flex;
 		justify-content: center;
-		transition: all 2s ease-out;
 
-		@media (max-width:670px) {
-			flex: 1 1 55%;
-		}
 	}
 
 	// .slider-lots__control
@@ -251,6 +248,7 @@ html {
 		align-items: center;
 		cursor: pointer;
 		justify-content: flex-end;
+		background-color: inherit;
 
 		span {
 			background: url("../img/icons/sl-arrow.svg") 0 0 no-repeat;
