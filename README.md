@@ -1,4 +1,4 @@
-# [Lending page #2](https://vansalivan.github.io/Virtual-Keyboard/) 
+# [Lending page #2](https://vansalivan.github.io/lending-page-2/) 
 ### Функционал:
 - Адаптивная и кроссбраузерная верстка;
 - Динамическое отслеживание скролла в шапке сайта;
