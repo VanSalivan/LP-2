@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.min.css">
-
 	<title>Title</title>
 </head>
 
@@ -13,11 +12,32 @@
 	<div class="wrapper">
 		@@include("_header.html",{})
 		<main class="page">
-			<!-- MAIN-SLIDER -->
-			<div class="main-slider" id="main-slider">
-				<div class="main-slider__body">
+			<div class="main-slider swipper" id="main-slider">
+				<div class="main-slider__body swipper__container">
 					<!-- СЛАЙД -->
-					<div class="main-slider__item item-main-slider">
+					<div class="swipper__item item-main-slider _active">
+						<div class="item-main-slider__content">
+							<!-- ОГРАНИЧИВАЮЩИЙ КОНТЕЙНЕР -->
+							<div class="item-main-slider__container _container">
+								<div class="title">
+									<div class="title__title">Только эксклюзивные</div>
+									<div class="title__subtitle white">Лоты под аукцион и свободную продажу</div>
+								</div>
+								<div class="item-main-slider__text">
+									Мы собираем эксклюзивную публику и экслюзивные лоты, даем
+									удобный и автоматизированный сервис по покупке и продаже, а также выставлению
+									лотов на аукцион, предоставляем личные кабинеты, а также оказываем сопутствубщие
+									услуги с продажей редких и дорогих вещей
+								</div>
+								<a href="" class="item-main-slider__btn btn">Присоединиться</a>
+							</div>
+						</div>
+						<div class="item-main-slider__bg _ibg">
+							<img class="_ibg" src="./img/main_slider/01.jpg" alt="">
+						</div>
+					</div>
+					<!-- СЛАЙД -->
+					<div class="swipper__item item-main-slider">
 						<div class="item-main-slider__content">
 							<!-- ОГРАНИЧИВАЮЩИЙ КОНТЕЙНЕР -->
 							<div class="item-main-slider__container _container">
@@ -40,12 +60,11 @@
 					</div>
 				</div>
 				<div class="main-slider__control control-main-slider">
-					<div class="control-main-slider__arrow control-main-slider__arrow_prev"></div>
+					<div class="control-main-slider__arrow arrow left"></div>
 					<div class="control-main-slider__decor"><img src="./img/icons/rotate.png" alt=""></div>
-					<div class="control-main-slider__arrow control-main-slider__arrow_next"></div>
+					<div class="control-main-slider__arrow arrow right"></div>
 				</div>
 			</div>
-			<!-- LOTS -->
 			<div class="lots" id="lots">
 				<!-- ОГРАНИЧИВАЮЩИЙ КОНТЕЙНЕР -->
 				<div class="lots__container _container">
@@ -68,11 +87,11 @@
 						</div>
 					</div>
 					<!-- LOTS-SLIDER -->
-					<section class="lots__slider slider-lots">
+					<div class="lots__slider slider-lots slider-container">
 						<!-- ФЛЕКС КОНТЕЙНЕР -->
-						<div class="slider-lots__body">
+						<div class="slider-lots__body slider-track">
 							<!-- ОБЕРТКА СЛАЙДА -->
-							<div class="slider-lots__slide">
+							<div class="slider-lots__slide slider-item">
 								<div class="lot">
 									<!-- КАРТИНКА С ТАЙМЕРОМ -->
 									<div class="lot__header">
@@ -105,7 +124,7 @@
 								</div>
 							</div>
 							<!-- ОБЕРТКА СЛАЙДА -->
-							<div class="slider-lots__slide">
+							<div class="slider-lots__slide slider-item">
 								<div class="lot">
 									<!-- КАРТИНКА С ТАЙМЕРОМ -->
 									<div class="lot__header">
@@ -138,7 +157,106 @@
 								</div>
 							</div>
 							<!-- ОБЕРТКА СЛАЙДА -->
-							<div class="slider-lots__slide">
+							<div class="slider-lots__slide slider-item">
+								<div class="lot">
+									<!-- КАРТИНКА С ТАЙМЕРОМ -->
+									<div class="lot__header">
+										<a href="" class="lot__image ibg"><img src="./img/lots/03.jpg" alt=""></a>
+										<div class="lot__timer timer-lot">
+											<div class="timer-lot__icon"><img src="./img/icons/timer.svg" alt=""></div>
+											<div class="timer-lot__item">3:21:45:37</div>
+										</div>
+									</div>
+									<!-- TITLE -->
+									<a href="" class="lot__title">Rolex Paul Newman Daytona</a>
+									<!-- INFO -->
+									<div class="lot__info info-lot">
+										<div class="info-lot__statistic">
+											<div class="info-lot__icon"><img src="./img/icons/eye.png" alt=""></div>
+											<div class="info-lot__value">11</div>
+										</div>
+										<div class="info-lot__current-bet current-bet-info-lot">
+											<div class="current-bet-info-lot__label">Текущая ставка</div>
+											<div class="current-bet-info-lot__value">3 245 000</div>
+											<div class="current-bet-info-lot__currency">₽</div>
+										</div>
+										<div class="info-lot__statistic">
+											<div class="info-lot__icon"><img src="./img/icons/hand.png" alt=""></div>
+											<div class="info-lot__value">3</div>
+										</div>
+									</div>
+									<!-- BUTTON -->
+									<a href="" class="info-lot__btn btn btn_big">ПОДНЯТЬ СТАВКУ</a>
+								</div>
+							</div>
+							<!-- ОБЕРТКА СЛАЙДА -->
+							<div class="slider-lots__slide slider-item">
+								<div class="lot">
+									<!-- КАРТИНКА С ТАЙМЕРОМ -->
+									<div class="lot__header">
+										<a href="" class="lot__image ibg"><img src="./img/lots/01.jpg" alt=""> </a>
+										<div class="lot__timer timer-lot">
+											<div class="timer-lot__icon"><img src="./img/icons/timer.svg" alt=""></div>
+											<div class="timer-lot__item">3:21:45:37</div>
+										</div>
+									</div>
+									<!-- TITLE -->
+									<a href="" class="lot__title">Arnold & Son Worldtimer discovery of antarctica</a>
+									<!-- INFO -->
+									<div class="lot__info info-lot">
+										<div class="info-lot__statistic">
+											<div class="info-lot__icon"><img src="./img/icons/eye.png" alt=""></div>
+											<div class="info-lot__value">1 098</div>
+										</div>
+										<div class="info-lot__current-bet current-bet-info-lot">
+											<div class="current-bet-info-lot__label">Текущая ставка</div>
+											<div class="current-bet-info-lot__value">18 999 203</div>
+											<div class="current-bet-info-lot__currency">₽</div>
+										</div>
+										<div class="info-lot__statistic">
+											<div class="info-lot__icon"><img src="./img/icons/hand.png" alt=""></div>
+											<div class="info-lot__value">75</div>
+										</div>
+									</div>
+									<!-- BUTTON -->
+									<a href="" class="info-lot__btn btn btn_big">ПОДНЯТЬ СТАВКУ</a>
+								</div>
+							</div>
+							<!-- ОБЕРТКА СЛАЙДА -->
+							<div class="slider-lots__slide slider-item">
+								<div class="lot">
+									<!-- КАРТИНКА С ТАЙМЕРОМ -->
+									<div class="lot__header">
+										<a href="" class="lot__image ibg"><img src="./img/lots/02.jpg" alt=""></a>
+										<div class="lot__timer timer-lot">
+											<div class="timer-lot__icon"><img src="./img/icons/timer.svg" alt=""></div>
+											<div class="timer-lot__item">3:21:45:37</div>
+										</div>
+									</div>
+									<!-- TITLE -->
+									<a href="" class="lot__title">Chateau Lafite 1949</a>
+									<!-- INFO -->
+									<div class="lot__info info-lot">
+										<div class="info-lot__statistic">
+											<div class="info-lot__icon"><img src="./img/icons/eye.png" alt=""></div>
+											<div class="info-lot__value">756</div>
+										</div>
+										<div class="info-lot__current-bet current-bet-info-lot">
+											<div class="current-bet-info-lot__label">Текущая ставка</div>
+											<div class="current-bet-info-lot__value">245 050</div>
+											<div class="current-bet-info-lot__currency">₽</div>
+										</div>
+										<div class="info-lot__statistic">
+											<div class="info-lot__icon"><img src="./img/icons/hand.png" alt=""></div>
+											<div class="info-lot__value">3</div>
+										</div>
+									</div>
+									<!-- BUTTON -->
+									<a href="" class="info-lot__btn btn btn_big">ПОДНЯТЬ СТАВКУ</a>
+								</div>
+							</div>
+							<!-- ОБЕРТКА СЛАЙДА -->
+							<div class="slider-lots__slide slider-item">
 								<div class="lot">
 									<!-- КАРТИНКА С ТАЙМЕРОМ -->
 									<div class="lot__header">
@@ -171,16 +289,15 @@
 								</div>
 							</div>
 						</div>
-					</section>
+					</div>
 				</div>
 				<!-- LOTS-CONTROLS SLIDER -->
 				<div class="slider-lots__control control-slider-lots">
-					<div class="control-slider-lots__arrow control-slider-lots__arrow_prev"><span></span></div>
+					<button class="control-slider-lots__arrow control-slider-lots__arrow_prev"><span></span></button>
 					<a href="" class="control-slider-lots__link">Все Лоты</a>
-					<div class="control-slider-lots__arrow control-slider-lots__arrow_next"><span></span></div>
+					<button class="control-slider-lots__arrow control-slider-lots__arrow_next"><span></span></button>
 				</div>
 			</div>
-			<!-- CATEGORIES -->
 			<div class="categories" id="categories">
 				<!-- КОНТЕЙНЕР ВНЕШНЕГО ОТСУПА -->
 				<div class="categories__outer-wrapper">
@@ -325,7 +442,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- SERVISES -->
 			<div class="services" id="services">
 				<div class="services__container _container">
 					<!-- SERVICES-HEADER -->
@@ -382,12 +498,8 @@
 							</div>
 						</div>
 					</div>
-
-
 				</div>
-
 			</div>
-			<!-- QUOTES -->
 			<div class="quotes" id="quotes">
 				<div class="quotes__container _container">
 					<!-- QUOTES-HEADER -->
@@ -437,7 +549,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- INFO -->
 			<div class="info" id="info">
 				<div class="info__container _container">
 					<!-- Флекс контейнер -->
@@ -453,7 +564,8 @@
 									<!-- НОВОСТЬ -->
 									<div class="info__item">
 										<div class="info__date">12.07.14</div>
-										<a href="" class="info__label">Уникальной Лакшери аукционе, здесь вы сможете найти</a>
+										<a href="" class="info__label">Уникальной Лакшери аукционе, здесь вы сможете
+											найти</a>
 										<div class="info__text">
 											Продажа товаров, ценных бумаг, имущества предприятий,
 											произведений искусства и других объектов, которая...
@@ -464,14 +576,16 @@
 										<div class="info__date">12.07.14</div>
 										<a href="" class="info__label">Достойные для себя лоты</a>
 										<div class="info__text">
-											Имущества предприятий, произведений искусства и других объектов, произведений редприятий,
+											Имущества предприятий, произведений искусства и других объектов,
+											произведений редприятий,
 											произведений искусств...
 										</div>
 									</div>
 									<!-- НОВОСТЬ -->
 									<div class="info__item">
 										<div class="info__date">12.07.14</div>
-										<a href="" class="info__label">Уникальной Лакшери аукционе, здесь вы сможете найти</a>
+										<a href="" class="info__label">Уникальной Лакшери аукционе, здесь вы сможете
+											найти</a>
 										<div class="info__text">
 											Продажа товаров, ценных бумаг, имущества предприятий,
 											произведений искусства и других объектов, которая...
@@ -490,7 +604,8 @@
 								<div class="info__content">
 									<!-- ITEM -->
 									<div class="info__item">
-										<a href="" class="info__label">Уникальной Лакшери аукционе, здесь вы сможете найти</a>
+										<a href="" class="info__label">Уникальной Лакшери аукционе, здесь вы сможете
+											найти</a>
 										<div class="info__text">
 											Продажа товаров, ценных бумаг, имущества предприятий,
 											произведений искусства и других объектов, которая...
@@ -500,14 +615,14 @@
 									<div class="info__item">
 										<a href="" class="info__label">Достойные для себя лоты</a>
 										<div class="info__text">
-											Имущества предприятий, произведений искусства и других объектов, произведений редприятий,
+											Имущества предприятий, произведений искусства и других объектов,
+											произведений редприятий,
 											произведений искусств...
 										</div>
 									</div>
 								</div>
 							</section>
 						</div>
-						<!-- SUBSCRIBE -->
 						<div class="info__column">
 							<div class="info__subscribe subscribe">
 								<div class="subscribe__title title-info">
@@ -518,7 +633,8 @@
 									<!-- ОБЕРТКА -->
 									<div class="subscribe__column">
 										<div class="subscribe__text">
-											Для получения уведомлений о новых предложениях, введите адрес своей электронной почты
+											Для получения уведомлений о новых предложениях, введите адрес своей
+											электронной почты
 										</div>
 									</div>
 									<!-- ОБЕРТКА -->
@@ -527,7 +643,8 @@
 											<div class="form-subscribe__input">
 												<input type="email" placeholder="Ваш e-mail" required>
 											</div>
-											<button type="submit" class="form-subscribe__button"><span>OK</span></button>
+											<button type="submit"
+												class="form-subscribe__button"><span>OK</span></button>
 										</form>
 									</div>
 								</div>
