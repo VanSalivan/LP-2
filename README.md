@@ -1,4 +1,5 @@
 # [Lending page #2](https://vansalivan.github.io/lending-page-2/) 
+Цель: Создание адаптивной страницы с JS функционалом;
 ### Функционал:
 - Все компоненты написаны на чистом JavaScript;
 - Адаптивная и кроссбраузерная верстка (Chrome, Mozilla, Opera);
