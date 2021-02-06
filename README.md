@@ -1,4 +1,4 @@
-# [Lending page #2](https://vansalivan.github.io/002/) 
+# [Lending page #2](https://vansalivan.github.io/layout__002/) 
 Цель: Создание адаптивной страницы, практика написания JavaScript;
 ### Функционал:
 - Все компоненты написаны на чистом JavaScript;
